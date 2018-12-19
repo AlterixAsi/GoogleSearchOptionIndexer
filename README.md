@@ -2,10 +2,15 @@
 Records google search options by keyword
 
 You need python 3.7 (duh)
+
 You also need Beautiful Soup 4, lxml, and selenium
+
 in terminal in pycharm to install these things do
+
 pip install BeautifulSoup4
+
 pip install selenim
+
 pip install lxml
 
 in main to change the keyword go to the first searchIndex and change the string in there
