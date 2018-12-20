@@ -37,6 +37,15 @@ def searchIndex(keys: str, a: [], driver:webdriver,soup:BeautifulSoup):
         temp = BeautifulSoup(str(x), features="lxml")
         print(temp.find("b"))
         try:
-            a.append(keys + temp.find("b").string)
+            a.append(getStringFromSpan(str(temp.find("span"))) + temp.find("b").string)
         except AttributeError:
             print("one down")
+
+def find(s, ch):
+    return [i for i, ltr in enumerate(s) if ltr == ch]
+
+def getStringFromSpan(s:str) -> str: #https://stackoverflow.com/questions/11122291/python-find-char-in-string-can-i-get-all-indexes
+    first = s.index(">")+1
+    second = find(s,"<")[1]
+    return s[first:second]
+
