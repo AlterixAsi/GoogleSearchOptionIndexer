@@ -1,7 +1,7 @@
 # GoogleSearchOptionIndexer
 Records google search options by keyword
 
-You need python 3.7 (duh)
+You need python 3.6 (duh)
 
 You also need Beautiful Soup 4, lxml, and selenium
 
